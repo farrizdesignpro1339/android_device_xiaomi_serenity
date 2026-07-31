@@ -6,3 +6,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 ```
+# android_device_xiaomi_serenity
