@@ -1,4 +1,4 @@
-# Android device tree for Redmi missi (missi)
+# Android device tree for Redmi A5 / Poco C71 (serenity)
 
 ```
 #
