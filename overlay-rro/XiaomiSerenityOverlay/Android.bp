@@ -1,0 +1,8 @@
+runtime_resource_overlay {
+    name: "FrameworksResSerenity",
+    theme: "FrameworksResSerenity",
+    resource_dirs: ["res"],
+    certificate: "platform",
+    sdk_version: "current",
+    product_specific: true, // WAJIB ini, bukan vendor!
+}
