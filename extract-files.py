@@ -14,7 +14,7 @@ namespace_imports = [
 ]
 
 module = ExtractUtilsModule(
-    'missi',
+    'serenity',
     'xiaomi',
     namespace_imports=namespace_imports,
 )

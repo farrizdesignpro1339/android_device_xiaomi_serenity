@@ -40,7 +40,6 @@ vendor/lib64/soundfx/libhapticgenerator.so
 vendor/lib64/libvibrator.so
 
 # Audio configs
-etc/audio_effects.xml
 odm/etc/audio/audio_policy_configuration.xml
 odm/etc/audio/audio_policy_configuration_a2dp_offload_disabled.xml
 odm/etc/audio/audio_policy_engine_configuration.xml
@@ -788,23 +787,6 @@ vendor/lib/hw/local_time.default.so
 vendor/lib64/hw/local_time.default.so
 
 # Media
-etc/seccomp_policy/mediacodec.policy
-lib/graphicbuffersource-aidl-ndk.so
-lib/libmedia_codeclist.so
-lib/libstagefright_aidl_bufferpool2.so
-lib/libstagefright_bufferpool@2.0.1.so
-lib/libstagefright_codecbase.so
-lib/libstagefright_framecapture_utils.so
-lib/libstagefright_graphicbuffersource_aidl.so
-lib/libstagefright_surface_utils.so
-lib64/graphicbuffersource-aidl-ndk.so
-lib64/libmedia_codeclist.so
-lib64/libstagefright_aidl_bufferpool2.so
-lib64/libstagefright_bufferpool@2.0.1.so
-lib64/libstagefright_codecbase.so
-lib64/libstagefright_framecapture_utils.so
-lib64/libstagefright_graphicbuffersource_aidl.so
-lib64/libstagefright_surface_utils.so
 system_ext/lib/libremotedisplay.so
 system_ext/lib/libstagefright_surface.so
 system_ext/lib/libstagefright_wfd.so
@@ -850,7 +832,6 @@ vendor/lib/libGLES_mali.so
 vendor/lib64/libGLES_mali.so
 
 # NFC configs
-etc/libnfc-nci.conf
 
 # Payment (Xiaomi)
 vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-trustyservice.rc
@@ -17435,7 +17416,6 @@ vendor/lib/libaudioclient_aidl_conversion.so
 vendor/lib/libaudiofoundation.so
 vendor/lib/libavcodec-59.so
 vendor/lib/libavutil-57.so
-vendor/lib/libboost.so
 vendor/lib/libbqbbt.so
 vendor/lib/libbt-sprd_suite.so
 vendor/lib/libbt-ssp_bt.so
