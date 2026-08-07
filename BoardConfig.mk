@@ -7,7 +7,19 @@ DEVICE_PATH := device/xiaomi/serenity
 
 # A/B
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS +=
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    init_boot \
+    odm \
+    product \
+    system \
+    system_ext \
+    vendor \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor
+
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
@@ -50,12 +62,11 @@ ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-BOARD_INCLUDE_DTB_IN_BOOTIMG := 
 endif
 
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 104857600
-BOARD_SUPER_PARTITION_SIZE := 5368709120 # TODO: Fix hardcoded value
+BOARD_SUPER_PARTITION_SIZE := 5368709120
 BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     odm \
@@ -65,7 +76,7 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system_ext \
     vendor \
     vendor_dlkm
-BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 5364514816 # TODO: Fix hardcoded value
+BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 5364514816
 
 # Platform
 TARGET_BOARD_PLATFORM := ums9230
