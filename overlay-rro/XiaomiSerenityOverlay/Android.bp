@@ -1,8 +1,8 @@
 runtime_resource_overlay {
-    name: "FrameworksResSerenity",
-    theme: "FrameworksResSerenity",
+    name: "XiaomiSerenityOverlay",
+    theme: "XiaomiSerenityOverlay",
     resource_dirs: ["res"],
     certificate: "platform",
     sdk_version: "current",
-    product_specific: true, // WAJIB ini, bukan vendor!
+    product_specific: true,
 }
