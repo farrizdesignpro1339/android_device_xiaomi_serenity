@@ -15,11 +15,11 @@
 | Architecture | ARM64 (Cortex-A75 + Cortex-A55) |
 | RAM | 4GB / 6GB LPDDR4X |
 | Storage | 64GB / 128GB eMMC 5.1 |
-| Display | 6.88" IPS LCD, 720x1640, 320dpi, 90Hz |
+| Display | 6.88" IPS LCD, 720x1640, 320dpi, 120Hz |
 | GPU | Mali-G57 MC1 |
-| Camera | 50MP (main) + 0.08MP (depth) / 5MP (front) |
-| Battery | 5160mAh |
-| Connectivity | 4G LTE, Wi-Fi 5, Bluetooth 5.0, GPS, NFC (region-dependent) |
+| Camera | 32MP (main) + 8MP (ultrawide) / 5MP (front) |
+| Battery | 5200mAh |
+| Connectivity | 4G LTE, Wi-Fi 5, Bluetooth 5.0, GPS |
 | Fingerprint | Side-mounted (Goodix/Silead) |
 | Target Product | `lineage_serenity` |
 | ROM Base | LineageOS (Android 16) |
