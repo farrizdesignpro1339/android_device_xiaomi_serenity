@@ -140,3 +140,9 @@ prebuilt_etc {
     src: "etc/fstab.cali",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "fstab.serenity",
+    src: "etc/fstab.serenity",
+    vendor: true,
+}

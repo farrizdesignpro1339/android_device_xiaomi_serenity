@@ -16,11 +16,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_DEVICE := serenity
 PRODUCT_NAME := lineage_serenity
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := serenity
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MODEL := 25028RN03A
+PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="serenity_id-user 15 AP3A.240905.015.A2 A15.0.10.0.VGWIDXM release-keys" \
-    BuildFingerprint=Redmi/serenity/serenity:15/AP3A.240905.015.A2/A15.0.10.0.VGWIDXM:user/release-keys
+    BuildDesc="mivendor_ums9230-user 15 AP3A.240905.015.A2 A15.0.11.0.VGWIDXM release-keys" \
+    BuildFingerprint=Redmi/mivendor_ums9230/mivendor_ums9230:15/AP3A.240905.015.A2/A15.0.11.0.VGWIDXM:user/release-keys

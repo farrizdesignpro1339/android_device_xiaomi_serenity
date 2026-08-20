@@ -1,4 +1,4 @@
-# Unpinned blobs from missi_id-user 15 AP3A.240905.015.A2 A15.0.10.0.VGWIDXM release-keys
+# Unpinned blobs from mivendor_ums9230-user 15 AP3A.240905.015.A2 A15.0.11.0.VGWIDXM release-keys
 
 # Audio
 vendor/bin/hw/android.hardware.audio.service
