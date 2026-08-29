@@ -22,5 +22,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="mivendor_ums9230-user 15 AP3A.240905.015.A2 A15.0.11.0.VGWIDXM release-keys" \
-    BuildFingerprint=Redmi/mivendor_ums9230/mivendor_ums9230:15/AP3A.240905.015.A2/A15.0.11.0.VGWIDXM:user/release-keys
+    BuildDesc="mivendor_ums9230-user 16 BP2A.250805.002 A16.0.0.1.VGWIDXM release-keys" \
+    BuildFingerprint=Redmi/mivendor_ums9230/mivendor_ums9230:16/BP2A.250805.002/A16.0.0.1.VGWIDXM:user/release-keys
