@@ -130,6 +130,84 @@ PRODUCT_PACKAGES += \
     init.recovery.common.rc \
     ueventd.serenity.rc
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/primary_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_platform_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_config.xml \
+    $(LOCAL_PATH)/audio/audio_route.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_route.xml \
+    $(LOCAL_PATH)/audio/audio_pcm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_pcm.xml
+
+# Audio params (Unisoc sprd)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audio_pga.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_pga.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audio_process.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_process.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audio_structure.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_structure.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audioparam_config.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audioparam_config.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version1/codec.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/codec.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version1/cvs.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/cvs.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version1/dsp_vbc.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/dsp_vbc.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audio_pga.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_pga.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audio_process.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_process.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audio_structure.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_structure.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audioparam_config.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audioparam_config.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version2/codec.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/codec.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version2/cvs.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/cvs.xml \
+    $(LOCAL_PATH)/audio/audio_params/sprd/version2/dsp_vbc.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/dsp_vbc.xml
+
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_c2_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_v1.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+# WiFi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/unisoc_wifi_hal_arm64.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/unisoc_wifi_hal_arm64.xml
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    $(LOCAL_PATH)/configs/sensors/lux_param.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/lux_param.json \
+    $(LOCAL_PATH)/configs/sensors/sensor_config.xml:$(TARGET_COPY_OUT_ODM)/etc/sensor_config.xml
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gps/gps_debug.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps_debug.conf
+
+# Keylayout & IDC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/adaptive_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/adaptive_ts.kl \
+    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/configs/idc/adaptive_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/adaptive_ts.idc \
+    $(LOCAL_PATH)/configs/idc/focaltech_ats.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/focaltech_ats.idc \
+    $(LOCAL_PATH)/configs/idc/focaltech_spi_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/focaltech_spi_ts.idc \
+    $(LOCAL_PATH)/configs/idc/focaltech_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/focaltech_ts.idc \
+    $(LOCAL_PATH)/configs/idc/msg2138_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/msg2138_ts.idc \
+    $(LOCAL_PATH)/configs/idc/synaptics_dsx.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsx.idc \
+    $(LOCAL_PATH)/configs/idc/synaptics_dsx_i2c.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsx_i2c.idc
+
+# Power & Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/power_adpf_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_adpf_config.xml \
+    $(LOCAL_PATH)/configs/power/power_scene_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_scene_config.xml \
+    $(LOCAL_PATH)/configs/thermal/thermal.conf:$(TARGET_COPY_OUT_ODM)/etc/thermal.conf \
+    $(LOCAL_PATH)/configs/thermal/thm_thresh_cfg.xml:$(TARGET_COPY_OUT_ODM)/etc/thm_thresh_cfg.xml
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.cali:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.cali \
     $(LOCAL_PATH)/rootdir/etc/fstab.serenity:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.serenity
