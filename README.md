@@ -17,12 +17,12 @@
 | Storage | 64GB / 128GB eMMC 5.1 |
 | Display | 6.88" IPS LCD, 720x1640, 320dpi, 120Hz |
 | GPU | Mali-G57 MC1 |
-| Camera | 32MP (main) + 8MP (ultrawide) / 5MP (front) |
+| Camera | 32MP (main) + 8MP (front) |
 | Battery | 5200mAh |
 | Connectivity | 4G LTE, Wi-Fi 5, Bluetooth 5.0, GPS |
 | Fingerprint | Side-mounted (Goodix/Silead) |
 | Target Product | `lineage_serenity` |
-| ROM Base | LineageOS (Android 16) |
+| ROM Base | LineageOS 24.0 (Android 17) |
 | Vendor API Level | 33 (Android 13) |
 
 ## How to Build
