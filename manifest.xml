@@ -1,4 +1,4 @@
-<manifest version="5.0" type="device" target-level="7">
+<manifest version="5.0" type="device" target-level="10">
     <!-- Audio -->
     <hal format="hidl">
         <name>android.hardware.audio</name>
@@ -575,6 +575,6 @@
     </hal>
 
     <sepolicy>
-        <version>33.0</version>
+        <version>37.0</version>
     </sepolicy>
 </manifest>
