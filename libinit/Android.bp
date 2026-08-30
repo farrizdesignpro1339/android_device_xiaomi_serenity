@@ -1,0 +1,7 @@
+cc_library_static {
+    name: "libinit_serenity",
+    vendor: true,
+    srcs: ["init_xiaomi_serenity.cpp"],
+    static_libs: ["libbase"],
+    shared_libs: ["liblog"],
+}
