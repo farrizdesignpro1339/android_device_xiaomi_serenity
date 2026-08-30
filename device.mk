@@ -45,7 +45,12 @@ PRODUCT_ENABLE_UFFD_GC := true
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
-    XiaomiSerenityOverlay
+    FrameworksResOverlaySerenity
+    SettingsResOverlaySerenity
+    SystemUIOverlaySerenity
+    TetheringResOverlaySerenity
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

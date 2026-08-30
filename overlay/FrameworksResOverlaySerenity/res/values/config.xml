@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_carrier_volte_available">true</bool>
+    <bool name="config_carrier_volte_tty_supported">true</bool>
+    <bool name="config_carrier_wfc_ims_available">true</bool>
+    <bool name="config_device_vt_available">true</bool>
+    <bool name="config_device_wfc_ims_available">true</bool>
+    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_supportDoubleTapWake">true</bool>
+    <bool name="config_hotswapCapable">true</bool>
+    <bool name="config_enableWifiDisplay">true</bool>
+    <integer name="config_num_physical_slots">2</integer>
+    <integer name="config_defaultRefreshRate">0</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -51 V 68 H 51 V 0 H 0 Z</string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation">@string/config_mainBuiltInDisplayCutout</string>
+</resources>
