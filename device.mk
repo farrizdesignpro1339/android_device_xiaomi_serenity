@@ -45,9 +45,9 @@ PRODUCT_ENABLE_UFFD_GC := true
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
-    FrameworksResOverlaySerenity
-    SettingsResOverlaySerenity
-    SystemUIOverlaySerenity
+    FrameworksResOverlaySerenity \
+    SettingsResOverlaySerenity \
+    SystemUIOverlaySerenity \
     TetheringResOverlaySerenity
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
