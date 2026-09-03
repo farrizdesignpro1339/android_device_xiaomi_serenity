@@ -483,6 +483,6 @@
         <fqname>IFingerprintmmi/default</fqname>
     </hal>
     <sepolicy>
-        <version>33.0</version>
+        <version>202404</version>
     </sepolicy>
 </manifest>

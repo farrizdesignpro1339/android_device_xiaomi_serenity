@@ -143,3 +143,10 @@ BOARD_VNDK_VERSION := current
 
 # Inherit the proprietary files
 include vendor/xiaomi/serenity/BoardConfigVendor.mk
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BOARD_AVB_ENABLE := false
+SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_SEPOLICY_VERS := 202404
+BOARD_PREBUILT_DTBIMAGE_DIR := device/xiaomi/serenity/prebuilts
+BOARD_USES_INIT_BOOT := true
+BOARD_BUILD_INIT_BOOT_IMAGE := true
