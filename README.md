@@ -21,14 +21,24 @@
 | Battery | 5200mAh |
 | Connectivity | 4G LTE, Wi-Fi 5, Bluetooth 5.0, GPS |
 | Fingerprint | Side-mounted (Goodix/Silead) |
-| Target Product | `lineage_serenity` |
-| ROM Base | LineageOS 22.0 (Android 15) |
+| Target Product | `aosp_serenity` / `pixelos_serenity` |
+| ROM Base | PixelOS seventeen (Android 17) / AOSP |
 | Vendor API Level | 33 (Android 13) |
 
 ## How to Build
 
 ```bash
+# PixelOS seventeen
 source build/envsetup.sh
-lunch lineage_serenity-ap3a-userdebug
+lunch aosp_serenity-userdebug
+m pixelos
+
+# or
+lunch pixelos_serenity-userdebug
 m bacon
 ```
+
+## Branches
+
+- `lineage-22.0` - LineageOS 22.0 (Android 15)
+- `seventeen` - PixelOS seventeen (Android 17) - GKI 5.15 + KSU + SUSFS + Droidspaces
