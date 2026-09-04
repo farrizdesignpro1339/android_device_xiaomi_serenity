@@ -5,6 +5,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_serenity.mk \
+    $(LOCAL_DIR)/custom_serenity.mk \
     $(LOCAL_DIR)/lineage_serenity.mk \
     $(LOCAL_DIR)/pixelos_serenity.mk
 
@@ -12,6 +13,9 @@ COMMON_LUNCH_CHOICES := \
     aosp_serenity-cp2a-user \
     aosp_serenity-cp2a-userdebug \
     aosp_serenity-cp2a-eng \
+    custom_serenity-cp2a-user \
+    custom_serenity-cp2a-userdebug \
+    custom_serenity-cp2a-eng \
     lineage_serenity-cp2a-user \
     lineage_serenity-cp2a-userdebug \
     lineage_serenity-cp2a-eng \
