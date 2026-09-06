@@ -6,7 +6,8 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_serenity.mk \
     $(LOCAL_DIR)/lineage_serenity.mk \
-    $(LOCAL_DIR)/pixelos_serenity.mk
+    $(LOCAL_DIR)/pixelos_serenity.mk \
+    $(LOCAL_DIR)/custom_serenity.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_serenity-bp4a-user \
@@ -17,4 +18,7 @@ COMMON_LUNCH_CHOICES := \
     lineage_serenity-bp4a-eng \
     pixelos_serenity-bp4a-user \
     pixelos_serenity-bp4a-userdebug \
-    pixelos_serenity-bp4a-eng
+    pixelos_serenity-bp4a-eng \
+    custom_serenity-bp4a-user \
+    custom_serenity-bp4a-userdebug \
+    custom_serenity-bp4a-eng

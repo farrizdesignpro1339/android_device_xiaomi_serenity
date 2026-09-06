@@ -49,7 +49,6 @@ ro.actionable_compatible_property.enabled=true
 ro.allow.mock.location=0
 ro.build.backported_fixes.alias_bitset.long_list=2
 ro.dalvik.vm.native.bridge=0
-ro.llndk.api_level=202404
 ro.lmk.critical_upgrade=true
 ro.lmk.downgrade_pressure=60
 ro.lmk.kill_heaviest_task=false

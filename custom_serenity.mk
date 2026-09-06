@@ -14,7 +14,7 @@ $(call inherit-product, device/xiaomi/serenity/device.mk)
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := serenity
-PRODUCT_NAME := pixelos_serenity
+PRODUCT_NAME := custom_serenity
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 25028RN03A
 PRODUCT_MANUFACTURER := Xiaomi
