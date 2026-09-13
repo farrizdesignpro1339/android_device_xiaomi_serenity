@@ -5,7 +5,7 @@
 
 DEVICE_PATH := device/xiaomi/serenity
 
-# A/B
+# A/B & Virtual A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
@@ -16,11 +16,11 @@ AB_OTA_PARTITIONS += \
     system \
     system_ext \
     vendor \
+    vendor_boot \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor
 
-BOARD_USES_RECOVERY_AS_BOOT := true
 ENABLE_VIRTUAL_AB := true
 
 # Architecture
@@ -72,7 +72,16 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 endif
 
-# Partitions
+# Recovery / Init Boot (Vendor Boot Setup)
+BOARD_USES_RECOVERY_AS_BOOT := false
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+
+BOARD_USES_INIT_BOOT := true
+BOARD_BUILD_INIT_BOOT_IMAGE := true
+
+# Partitions - Sizes
 BOARD_FLASH_BLOCK_SIZE := 262144
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
@@ -90,6 +99,8 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     vendor_dlkm
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 5364514816
 BOARD_USES_METADATA_PARTITION := true
+
+# Partitions - Filesystem Types
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs
@@ -97,8 +108,6 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_XIAOMI_DYNAMIC_PARTITIONS_FILE_SYSTEM_TYPE := erofs
-
 
 # Platform
 TARGET_BOARD_PLATFORM := ums9230
@@ -114,7 +123,7 @@ TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/odm_dlkm.prop
 TARGET_VENDOR_DLKM_PROP += $(DEVICE_PATH)/vendor_dlkm.prop
 
-# Recovery
+# Recovery Settings
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.serenity
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -128,9 +137,11 @@ VENDOR_SECURITY_PATCH := 2026-02-01
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_SEPOLICY_VERS := 202404
 
-# Verified Boot
-BOARD_AVB_ENABLE := false
+# Verified Boot (AVB)
+BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product system_dlkm
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
@@ -150,12 +161,8 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matri
 # VNDK
 BOARD_VNDK_VERSION := current
 
-# Inherit the proprietary files
-include vendor/xiaomi/serenity/BoardConfigVendor.mk
+# Proprietary & Fixes
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BOARD_AVB_ENABLE := false
-SELINUX_IGNORE_NEVERALLOWS := true
-BOARD_SEPOLICY_VERS := 202404
 BOARD_PREBUILT_DTBIMAGE_DIR := device/xiaomi/serenity/prebuilts
-BOARD_USES_INIT_BOOT := true
-BOARD_BUILD_INIT_BOOT_IMAGE := true
+
+include vendor/xiaomi/serenity/BoardConfigVendor.mk
