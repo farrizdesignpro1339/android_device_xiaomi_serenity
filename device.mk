@@ -290,36 +290,36 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/primary_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_platform_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_config.xml \
-    $(LOCAL_PATH)/audio/audio_route.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_route.xml \
-    $(LOCAL_PATH)/audio/audio_pcm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_pcm.xml
+    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(LOCAL_PATH)/configs/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    $(LOCAL_PATH)/configs/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/primary_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_platform_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_config.xml \
+    $(LOCAL_PATH)/configs/audio/audio_route.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_route.xml \
+    $(LOCAL_PATH)/configs/audio/audio_pcm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_pcm.xml
 
 # Audio params (Unisoc sprd)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audio_pga.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_pga.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audio_process.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_process.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audio_structure.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_structure.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version1/audioparam_config.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audioparam_config.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version1/codec.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/codec.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version1/cvs.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/cvs.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version1/dsp_vbc.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/dsp_vbc.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audio_pga.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_pga.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audio_process.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_process.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audio_structure.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_structure.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version2/audioparam_config.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audioparam_config.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version2/codec.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/codec.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version2/cvs.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/cvs.xml \
-    $(LOCAL_PATH)/audio/audio_params/sprd/version2/dsp_vbc.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/dsp_vbc.xml
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version1/audio_pga.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_pga.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version1/audio_process.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_process.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version1/audio_structure.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audio_structure.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version1/audioparam_config.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/audioparam_config.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version1/codec.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/codec.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version1/cvs.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/cvs.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version1/dsp_vbc.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version1/dsp_vbc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version2/audio_pga.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_pga.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version2/audio_process.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_process.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version2/audio_structure.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audio_structure.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version2/audioparam_config.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/audioparam_config.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version2/codec.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/codec.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version2/cvs.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/cvs.xml \
+    $(LOCAL_PATH)/configs/audio/audio_params/sprd/version2/dsp_vbc.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_params/sprd/version2/dsp_vbc.xml
 
 # Media
 PRODUCT_COPY_FILES += \
