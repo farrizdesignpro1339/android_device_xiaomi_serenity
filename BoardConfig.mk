@@ -63,15 +63,6 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := serenity_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/serenity
 
-# Kernel - prebuilt
-TARGET_FORCE_PREBUILT_KERNEL := true
-ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-endif
-
 # Recovery / Init Boot (Vendor Boot Setup)
 BOARD_USES_RECOVERY_AS_BOOT := false
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
@@ -163,6 +154,5 @@ BOARD_VNDK_VERSION := current
 
 # Proprietary & Fixes
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BOARD_PREBUILT_DTBIMAGE_DIR := device/xiaomi/serenity/prebuilts
 
 include vendor/xiaomi/serenity/BoardConfigVendor.mk
