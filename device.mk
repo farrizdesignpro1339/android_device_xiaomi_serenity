@@ -8,6 +8,12 @@ LOCAL_PATH := device/xiaomi/serenity
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -29,6 +35,18 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    FILESYSTEM_TYPE_vendor=erofs \
+    POSTINSTALL_OPTIONAL_vendor=true
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -37,10 +55,139 @@ PRODUCT_PACKAGES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
+
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@7.1-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    audio_policy.stub
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1-service.unisoc \
+    android.hardware.bluetooth@1.1.vendor \
+    libbluetooth_audio_session
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-service_64 \
+    android.hardware.camera.provider@2.4-impl-sprd \
+    camera.unisoc
+
+# Display & Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@4.0-service \
+    android.hardware.graphics.allocator@4.0-impl-arm \
+    android.hardware.graphics.mapper@4.0-impl-arm \
+    android.hardware.graphics.composer@2.4-service \
+    android.hardware.memtrack-service \
+    libutils.vendor \
+    libgralloc_extra \
+    gralloc.unisoc \
+    hwcomposer.unisoc \
+    dpu.unisoc \
+    gsp.unisoc
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service-lazy.clearkey \
+    android.hardware.drm-service-lazy.widevine
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service \
+    vendor.silead.hardware.fingerprintext-service \
+    vendor.sprd.hardware.fingerprintmmi-service \
+    libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
+    fingerprint.goodix.default \
+    fingerprint.silead.default
+
+# Face
+PRODUCT_PACKAGES += \
+    mifaced
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service.trusty
+
+# Keymaster / Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint@2.0-unisoc.service.trusty \
+    android.hardware.identity-service.trusty
+
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light
+
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@aidl-service-armnn-gpu
+
+# Power
+PRODUCT_PACKAGES += \
+    vendor.unisoc.hardware.power-service \
+    android.hardware.power-service \
+    android.hardware.power.stats-service.example
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.multihal
+
+# Thermal
+PRODUCT_PACKAGES += \
+    thermald
+
+# Trusty / TEE
+PRODUCT_PACKAGES += \
+    vendor.sprd.hardware.trusty-service \
+    vendor.sprd.hardware.tui-service
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.unisoc
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator
+
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service-lazy \
+    android.hardware.wifi.service \
+    wpa_supplicant \
+    hostapd \
+    libwifi-hal-wrapper
+
+# GNSS
+PRODUCT_PACKAGES += \
+    vendor.sprd.hardware.gnss-service
+
+# Xiaomi HIDL interfaces
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.micharge@1.0 \
+    vendor.xiaomi.hardware.misys@1.0 \
+    vendor.xiaomi.hardware.misys@2.0 \
+    vendor.xiaomi.hardware.misys@3.0 \
+    vendor.xiaomi.hardware.misys@4.0
+
+# Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.1-unisoc-service \
+    android.hardware.media.omx@1.0-service
+
+# CAS
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.2-service-lazy
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -54,9 +201,15 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Product characteristics
 PRODUCT_CHARACTERISTICS := phone
+
+# Cgroup
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Hardware permissions
 PRODUCT_COPY_FILES += \
@@ -194,10 +347,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 #     $(LOCAL_PATH)/configs/gps/gps_debug.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps_debug.conf
 
-# Keylayout & IDC
+# Fingerprint keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/adaptive_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/adaptive_ts.kl \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-goodix.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-silead.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-silead.kl
+
+# IDC
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/idc/adaptive_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/adaptive_ts.idc \
     $(LOCAL_PATH)/configs/idc/focaltech_ats.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/focaltech_ats.idc \
     $(LOCAL_PATH)/configs/idc/focaltech_spi_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/focaltech_spi_ts.idc \
@@ -205,6 +364,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/idc/msg2138_ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/msg2138_ts.idc \
     $(LOCAL_PATH)/configs/idc/synaptics_dsx.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsx.idc \
     $(LOCAL_PATH)/configs/idc/synaptics_dsx_i2c.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsx_i2c.idc
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
+    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Power & Thermal
 PRODUCT_COPY_FILES += \
@@ -219,9 +383,10 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi
 
-# Inherit the proprietary files
+# Vendor modules
 $(call inherit-product, vendor/xiaomi/serenity/serenity-vendor.mk)
 PRODUCT_ENFORCE_VINTF_MANIFEST := false
 PRODUCT_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
