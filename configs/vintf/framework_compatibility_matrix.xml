@@ -1,41 +1,65 @@
 <compatibility-matrix version="1.0" type="framework">
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.silead.hardware.fingerprintext</name>
-        <fqname>IFingerprintExt/default</fqname>
+        <interface>
+            <name>IFingerprintExt</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="hidl">
+    <hal format="hidl" optional="true">
         <name>vendor.sprd.hardware.boot</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::IBootControl/default</fqname>
+        <version>1.2</version>
+        <interface>
+            <name>IBootControl</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="hidl">
+    <hal format="hidl" optional="true">
         <name>vendor.sprd.hardware.broadcastradio</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::IBroadcastRadio/default</fqname>
+        <version>2.0</version>
+        <interface>
+            <name>IBroadcastRadio</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="hidl">
+    <hal format="hidl" optional="true">
         <name>vendor.sprd.hardware.connmgr</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IConnmgr/default</fqname>
+        <version>1.0</version>
+        <interface>
+            <name>IConnmgr</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.cplog_svc</name>
-        <fqname>ISysLogControl/default</fqname>
-        <fqname>ILogTransportInductor/default</fqname>
+        <interface>
+            <name>ISysLogControl</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ILogTransportInductor</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.enhance</name>
-        <fqname>IEnhance/default</fqname>
+        <interface>
+            <name>IEnhance</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.fingerprintmmi</name>
-        <fqname>IFingerprintmmi/default</fqname>
+        <interface>
+            <name>IFingerprintmmi</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
     <hal optional="true" format="aidl">
@@ -46,24 +70,36 @@
         </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.hdcp</name>
-        <fqname>IHDCP/default</fqname>
+        <interface>
+            <name>IHDCP</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.ifaa</name>
-        <fqname>IIfaa/default</fqname>
+        <interface>
+            <name>IIfaa</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.network</name>
-        <fqname>INetworkControl/default</fqname>
+        <interface>
+            <name>INetworkControl</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.soter</name>
-        <fqname>ISoter/default</fqname>
+        <interface>
+            <name>ISoter</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
     <hal optional="true" format="hidl">
@@ -77,19 +113,28 @@
         </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.tool</name>
-        <fqname>IToolControl/default</fqname>
+        <interface>
+            <name>IToolControl</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.trusty</name>
-        <fqname>ITrustyClientProvider/default</fqname>
+        <interface>
+            <name>ITrustyClientProvider</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.sprd.hardware.tui</name>
-        <fqname>ITui/default</fqname>
+        <interface>
+            <name>ITui</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
     <hal optional="true" format="aidl">
@@ -100,10 +145,12 @@
         </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.unisoc.hardware.ai_engine</name>
-        <version>2</version>
-        <fqname>IAIEngineControl/default</fqname>
+        <interface>
+            <name>IAIEngineControl</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
     <hal optional="true" format="aidl">
@@ -177,9 +224,12 @@
         </interface>
     </hal>
 
-    <hal optional="true" format="aidl">
+    <hal format="aidl" optional="true">
         <name>vendor.xiaomi.hardware.fx.tunnel</name>
-        <fqname>IMiFxTunnel/default</fqname>
+        <interface>
+            <name>IMiFxTunnel</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
     <hal optional="true" format="hidl">
