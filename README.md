@@ -21,7 +21,7 @@
 | Battery | 5200mAh |
 | Connectivity | 4G LTE, Wi-Fi 5, Bluetooth 5.0, GPS |
 | Fingerprint | Side-mounted (Goodix/Silead) |
-| Target Product | `aosp_serenity` / `pixelos_serenity` |
+| Target Product | `custom_serenity` |
 | ROM Base | PixelOS seventeen (Android 17) / AOSP |
 | Vendor API Level | 33 (Android 13) |
 
