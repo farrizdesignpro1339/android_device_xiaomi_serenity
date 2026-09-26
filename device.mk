@@ -26,9 +26,6 @@ PRODUCT_SHIPPING_API_LEVEL := 36
 
 # A/B packages
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service \
     checkpoint_gc \
     otapreopt_script \
     update_engine \
