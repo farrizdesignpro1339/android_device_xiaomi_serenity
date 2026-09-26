@@ -482,7 +482,4 @@
         <name>vendor.sprd.hardware.fingerprintmmi</name>
         <fqname>IFingerprintmmi/default</fqname>
     </hal>
-    <sepolicy>
-        <version>33.0</version>
-    </sepolicy>
 </manifest>
