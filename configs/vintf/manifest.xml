@@ -44,20 +44,6 @@
         <transport>hwbinder</transport>
         <fqname>@2.4::ICameraProvider/legacy/0</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.cas</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IMediaCasService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.drm</name>
-        <version>1</version>
-        <fqname>IDrmFactory/clearkey</fqname>
-    </hal>
     <hal format="aidl">
         <name>android.hardware.drm</name>
         <version>1</version>
@@ -116,11 +102,6 @@
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
         <fqname>@4.0::IMapper/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.health</name>
-        <version>1</version>
-        <fqname>IHealth/default</fqname>
     </hal>
     <hal format="aidl">
         <name>vendor.sprd.hardware.hdcp</name>
@@ -193,10 +174,6 @@
         <name>android.hardware.power</name>
         <version>3</version>
         <fqname>IPower/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.power.stats</name>
-        <fqname>IPowerStats/default</fqname>
     </hal>
     <hal format="aidl">
         <name>android.hardware.radio.config</name>
