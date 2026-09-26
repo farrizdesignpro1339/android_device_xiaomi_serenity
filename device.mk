@@ -90,9 +90,6 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power.stats-service.example
-# Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.multihal
 # Thermal
 # Trusty / TEE
 # USB
