@@ -147,6 +147,7 @@
 
     <hal format="aidl" optional="true">
         <name>vendor.unisoc.hardware.ai_engine</name>
+        <version>2</version>
         <interface>
             <name>IAIEngineControl</name>
             <instance>default</instance>
