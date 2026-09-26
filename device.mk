@@ -34,7 +34,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -51,13 +50,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
-
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
 
@@ -71,124 +68,45 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     audio_policy.stub
-
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1-service.unisoc \
     android.hardware.bluetooth@1.1.vendor \
     libbluetooth_audio_session
-
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-service_64 \
-    android.hardware.camera.provider@2.4-impl-sprd \
-    camera.unisoc
-
+    android.hardware.camera.provider@2.4-service_64
 # Display & Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@4.0-service \
-    android.hardware.graphics.allocator@4.0-impl-arm \
-    android.hardware.graphics.mapper@4.0-impl-arm \
     android.hardware.graphics.composer@2.4-service \
-    android.hardware.memtrack-service \
-    libutils.vendor \
-    libgralloc_extra \
-    gralloc.unisoc \
-    hwcomposer.unisoc \
-    dpu.unisoc \
-    gsp.unisoc
-
+    libutils.vendor
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service-lazy.clearkey \
-    android.hardware.drm-service-lazy.widevine
-
+    android.hardware.drm-service-lazy.clearkey
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service \
-    vendor.silead.hardware.fingerprintext-service \
-    vendor.sprd.hardware.fingerprintmmi-service \
-    libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
-    fingerprint.goodix.default \
-    fingerprint.silead.default
-
 # Face
-PRODUCT_PACKAGES += \
-    mifaced
-
 # Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service.trusty
-
 # Keymaster / Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint@2.0-unisoc.service.trusty \
-    android.hardware.identity-service.trusty
-
 # Light
-PRODUCT_PACKAGES += \
-    android.hardware.light
-
 # Neural Networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@aidl-service-armnn-gpu
-
 # Power
 PRODUCT_PACKAGES += \
-    vendor.unisoc.hardware.power-service \
-    android.hardware.power-service \
     android.hardware.power.stats-service.example
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal
-
 # Thermal
-PRODUCT_PACKAGES += \
-    thermald
-
 # Trusty / TEE
-PRODUCT_PACKAGES += \
-    vendor.sprd.hardware.trusty-service \
-    vendor.sprd.hardware.tui-service
-
 # USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb-service.unisoc
-
 # Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator
-
 # WiFi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy \
-    android.hardware.wifi.service \
-    wpa_supplicant \
-    hostapd \
-    libwifi-hal-wrapper
-
 # GNSS
-PRODUCT_PACKAGES += \
-    vendor.sprd.hardware.gnss-service
-
 # Xiaomi HIDL interfaces
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.micharge@1.0 \
-    vendor.xiaomi.hardware.misys@1.0 \
-    vendor.xiaomi.hardware.misys@2.0 \
-    vendor.xiaomi.hardware.misys@3.0 \
-    vendor.xiaomi.hardware.misys@4.0
-
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.1-unisoc-service \
     android.hardware.media.omx@1.0-service
-
 # CAS
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service-lazy
-
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
@@ -273,7 +191,6 @@ PRODUCT_PACKAGES += \
     swappiness.sh \
     trafficshow.sh \
     zramwb.sh
-
 PRODUCT_PACKAGES += \
     fstab.cali \
     fstab.serenity \
@@ -288,7 +205,6 @@ PRODUCT_PACKAGES += \
     init.zramwb.rc \
     init.recovery.common.rc \
     ueventd.serenity.rc
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
