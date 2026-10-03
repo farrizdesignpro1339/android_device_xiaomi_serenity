@@ -184,3 +184,8 @@ BOARD_VNDK_VERSION := current
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 include vendor/xiaomi/serenity/BoardConfigVendor.mk
+
+# DLKM images & modules from stock dump
+BOARD_USES_VENDOR_DLKMIMAGE := true
+BOARD_USES_SYSTEM_DLKMIMAGE := true
+include device/xiaomi/serenity/BoardConfigDLKM.mk
