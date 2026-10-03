@@ -170,3 +170,5 @@ BOARD_VNDK_VERSION := current
 
 # Inherit the proprietary files
 include vendor/xiaomi/serenity/BoardConfigVendor.mk
+# Reset OTA partitions: vendor BoardConfigVendor.mk (generated) menambah partisi modem/bootloader tanpa image
+AB_OTA_PARTITIONS := boot dtbo init_boot odm product system system_dlkm system_ext vendor vendor_boot vendor_dlkm vbmeta vbmeta_system vbmeta_vendor
