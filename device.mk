@@ -293,9 +293,3 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vendor modules
 $(call inherit-product, vendor/xiaomi/serenity/serenity-vendor.mk)
 
-# Pixel offline charging animation
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/charger/battery_fail.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/battery_fail.png \
-    $(LOCAL_PATH)/charger/battery_scale.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/battery_scale.png \
-    $(LOCAL_PATH)/charger/main_font.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/main_font.png \
-    $(LOCAL_PATH)/charger/animation.txt:$(TARGET_COPY_OUT_VENDOR)/etc/res/values/charger/animation.txt
