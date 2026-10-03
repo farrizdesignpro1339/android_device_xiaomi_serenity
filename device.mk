@@ -55,8 +55,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    audio.usb.default \
-    audio.r_submix.default \
     audio_policy.stub
 # Bluetooth
 PRODUCT_PACKAGES += \
