@@ -166,8 +166,7 @@ SERENITY_VENDOR_KO := \
     zram.ko \
     zsmalloc.ko
 
-BOARD_VENDOR_KERNEL_MODULES = $(strip $(BOARD_VENDOR_KERNEL_MODULES) \
-    $(foreach m,$(SERENITY_VENDOR_KO),$(KERNEL_MODULES_OUT)/$(m)))
+BOARD_VENDOR_KERNEL_MODULES = $(foreach m,$(SERENITY_VENDOR_KO),$(KERNEL_MODULES_OUT)/$(m))
 
 # Stock boot load order (vendor_dlkm/modules.load; ntfs3.ko absent in dump).
 BOARD_VENDOR_KERNEL_MODULES_LOAD = \
