@@ -86,4 +86,4 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     unisoc_binder.ko \
     sla_core.ko \
     kprobe_iomonitor.ko \
-    sprd_powerupcause.ko \
+    sprd_powerupcause.ko
